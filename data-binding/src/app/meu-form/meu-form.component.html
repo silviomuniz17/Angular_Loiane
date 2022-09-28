@@ -1,0 +1,27 @@
+<article>
+  <h3>Two-way data binding</h3>
+  <div>
+
+    <input type="text"
+           [ngModel]="nome"
+           (ngModelChange)="nome = $event"/>
+    <!--      passando o valor do componete para o template-->
+    <!--      passando o valor do template para o componete-->
+
+    <input type="text" [(ngModel)]="nome">
+    <!-- Juntou os 2= passando o valor do componete para o template e passando o valor do template para o componete -->
+
+    <p>Você digitou: {{ nome }}</p>
+
+  </div>
+  <div>
+
+    <input type="text" [(ngModel)]="pessoa.nome">
+    <input type="text" [(ngModel)]="pessoa.idade">
+    <!--      Buscando os valores do objeto criado no data-bindingcomponet.ts-->
+    <p>Meu nome é {{pessoa.nome}} e tenho {{pessoa.idade}} anos de idade</p>
+    <!--      imprimindo os valores do objeto criado no data-bindingcomponet.ts -->
+
+  </div>
+</article>
+

@@ -1,0 +1,137 @@
+<section>
+  <!--        <article>-->
+
+  <!--          <h3>Interpolation / Interpolação</h3>-->
+  <!--          <p>String realizada com interpolação {{ url }} </p> &lt;!&ndash;    imprimindo variavel criada no data-binding.component.ts&ndash;&gt;-->
+  <!--          <p>String realizada com interpolação (1 + 1) é: {{ 1 + 1 }} </p> &lt;!&ndash;    fazendo conta direto &ndash;&gt;-->
+  <!--          <p>String realizada com interpolação (1 + 1) é: {{ 1 + 1 + getValor() }} </p> &lt;!&ndash;    chamando um metodo &ndash;&gt;-->
+  <!--          <p>Curso de Angular / Gosto do Curso: {{ cursoAngular && getCurtirCurso() }} </p> &lt;!&ndash;    chamando um metodo &ndash;&gt;-->
+
+  <!--        </article>-->
+
+  <!--        <article>-->
+
+  <!--          <h3>Property Binding </h3>-->
+  <!--          <img src="{{urlImagem}}">-->
+  <!--          <br>-->
+  <!--          <img [src]="urlImagem">-->
+  <!--        </article>-->
+
+  <!-- ====================================================================================================================================== -->
+  <!--   Aula 10-->
+
+  <!--    <article>-->
+  <!--      <h3>Calss e Style Binding</h3>-->
+  <!--      <div>-->
+  <!--        Selecione uma classe-->
+  <!--        <select #classe (change)="0">-->
+  <!--          <option value="alert-success"> Sucesso</option>-->
+  <!--          <option value="alert-info"> Info</option>-->
+  <!--          <option value="alert-warning"> Alerta</option>-->
+  <!--          <option value="alert-danger"> Erro</option>-->
+  <!--        </select>-->
+  <!--        <br><br>-->
+
+  <!--        <div class="alert {{ classe.value}}" role="alert">-->
+  <!--          Texto colorido conforme valor do combobox-->
+  <!--        </div>-->
+
+
+  <!--        <div class="alert" role="alert"-->
+  <!--             [class.alert-success]="classe.value == 'alert-success'">-->
+  <!--          &lt;!&ndash;ficar colorido em volta do testo dependendo o tipo que selecionei &ndash;&gt;-->
+  <!--          Sucesso-->
+  <!--        </div>-->
+  <!--        <div class="alert" role="alert"-->
+  <!--             [class.alert-info]="classe.value == 'alert-info'">-->
+  <!--          &lt;!&ndash;ficar colorido em volta do testo dependendo o tipo que selecionei &ndash;&gt;-->
+  <!--          Info-->
+  <!--        </div>-->
+  <!--        <div class="alert" role="alert"-->
+  <!--             [class.alert-warning]="classe.value == 'alert-warning'">-->
+  <!--          &lt;!&ndash;ficar colorido em volta do testo dependendo o tipo que selecionei &ndash;&gt;-->
+  <!--          Alerta-->
+  <!--        </div>-->
+  <!--        <div class="alert" role="alert"-->
+  <!--             [class.alert-dargen]="classe.value == 'alert-danger'">-->
+  <!--          &lt;!&ndash;ficar colorido em volta do testo dependendo o tipo que selecionei &ndash;&gt;-->
+  <!--          Erro-->
+  <!--        </div>-->
+
+  <!--        <div class="alert alert-danger" role="alert"-->
+  <!--             [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">-->
+  <!--          &lt;!&ndash;imprimir valor da classe se for - alert-danger então estilo block senão nada   &ndash;&gt;-->
+  <!--          texto vai aparecer apenas em caso de erro-->
+  <!--        </div>-->
+
+  <!--      </div>-->
+  <!--    </article>-->
+
+  <!--  ===============================================================================================================================-->
+
+
+  <!--  <article>-->
+  <!--    <h3>Event Binding</h3>-->
+  <!--    <div>-->
+
+  <!--      <button (click)="botaoClicado()" class="btn btn-primary">-->
+  <!--        &lt;!&ndash; criado um metodo de ao clicar no botão no data-binding.componet.ts&ndash;&gt;-->
+  <!--        Me Clique!-->
+  <!--      </button>-->
+  <!--      <br><br>-->
+
+  <!--      <input type="text"-->
+  <!--      (keyup)="onKeyUp($event)"-->
+  <!--      (keyup.enter)= "SalvarValor(campoInput.value)"-->
+  <!--      (blur)="SalvarValor(campoInput.value)"-->
+  <!--      #campoInput/>-->
+  <!--&lt;!&ndash;  criado uma caixa de texto-->
+  <!--      (keyup) capitura o que foi escrito e manda para o data-binding.componet.ts-->
+  <!--      (keyup.enter) pegando o valor que sei onde está por conta da linha de cima-->
+  <!--      (blur) escutar o valor da primeira linha-->
+  <!--      #compoInput criando uma variavel local recebendo o valor &ndash;&gt;-->
+
+
+  <!--      <p>Valor Atual: {{ValorAtual}}</p>-->
+  <!--&lt;!&ndash;      imprimindo valor salvo na variavel criada no data-binding.componet.ts e digitada na caixa de texto&ndash;&gt;-->
+  <!--      <p>Valor Salvo: {{ValorSalvo}}</p>-->
+
+  <!--      <span-->
+  <!--      (mouseover)="onMouseOverOut"-->
+  <!--      (mouseout)="onMouseOverOut"-->
+  <!--      [class.highlight]="isMouseOver">-->
+  <!--&lt;!&ndash; evendo mouseover quando o mouse estiver em cima do texto-->
+  <!--     evento mouseout quando o mouse sairde cima do texto-->
+  <!--     aplicar a plasse somente quando o valor de onMouseOverOut for verdadeiro (declarei o a classe highlight no data-binding.component.css&ndash;&gt;-->
+  <!--      Passe o mouse sobre mim </span>-->
+  <!--    </div>-->
+  <!--  </article>-->
+
+  <!-- =============================================================================================================== -->
+
+  <!--  Aula 12-->
+
+  <!--  <app-meu-form></app-meu-form>-->
+
+  <!--  ==============================================================================================================-->
+
+  <!--  Aula 13--><!--  Aula 14-->
+  <div class="input-output-properties">
+    <article>
+      <h3>Imput/output Properties</h3>
+      <app-curso [nome]="nomeDoCurso"></app-curso>
+      <!--      recebendo uma propiedade nome criada no data-binding.component.ts-->
+
+      <app-contador [valor]="valorInicial"
+                    (mudouValor)="onMudouValor($event)"
+      ></app-contador>
+      <!--      recebendo valor di data.bindig.comp.ts -->
+
+
+    </article>
+  </div>
+
+  <!--  ===============================================================================================================-->
+
+
+</section>

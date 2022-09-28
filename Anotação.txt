@@ -1,0 +1,36 @@
+[Alt] + [Ctrl/Cmd] + [L]
+
+Para funcionar precisa instalar o nodejs
+instalar essa ferramento npm 
+npm i -g @angular/cli
+==================================================
+criar aplicação 
+ng new nome_da_aplicação
+==================================================
+iniciar aplicação
+ng serve --open
+ou
+ng s -o
+==================================================
+criar um componete por comando (pasta dom todos tipo css e html ts ...)
+ng g c nome_do_componente
+==================================================
+criar um service por comando
+ng generate service services
+==================================================
+criar um novo modulo
+ng generate module cursos
+===================================================
+Criar servidor API para teste
+Site(https://jsontots.pages.dev/)
+
+Instalar isso primeiro.
+npm install -g json-server
+
+Iniciar (precisa estar na pasta db.json criada no projeto)
+json-server --watch db.json 
+===================================================
+
+
+
+
